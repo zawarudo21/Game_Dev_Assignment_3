@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>`
+<body>
+  <canvas id="canvas" width="640" 
+		height="480" style="border:1px solid #000;">
+		 Your browser does not support the canvas element.
+         <!-- <script src="worker.js"></script> -->
+         <script src="grievous.js"></script>
+         <script src="main.js"></script>
+  </canvas>
+  <input type="range"  min="1" max="120" value="120" onchange="updateFrameRate(this.value)"/>
+		<span id="FrameRateLabel">120</span>
+</body>
+</html>
