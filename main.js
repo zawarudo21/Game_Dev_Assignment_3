@@ -1,6 +1,6 @@
 var max_fps = 60;
 var frame_count = 0;
-var ball_count =0;
+var update_count =0;
 var player_hp = 5;
 var forearm_hp = [3,3,3,3];
 var keys_pressed = {}
@@ -38,7 +38,7 @@ window.onload = function() {
 
   original_x = 320;
   original_y = 230;
-  original_vx = 0;
+  original_vx = 0.2;
   original_vy = 0;
 
   var general_grievous = new grievous(original_x, original_y, original_vx, original_vy);
@@ -67,8 +67,8 @@ window.onload = function() {
     {
       update(time_step);
       if(frame_count < 100){
-        console.log("general_grievous.x :",ball_count, general_grievous.x);
-        ball_count += 1;
+        console.log("general_grievous.x :",update_count, general_grievous.x);
+        update_count += 1;
       }
       surplus -= time_step;
     }

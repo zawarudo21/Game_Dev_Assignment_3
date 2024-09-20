@@ -72,7 +72,7 @@ self.onmessage = function(event){
 
 function check_collisions(data){
 
-    console.log(data);
+    // console.log(data);
     general_grievous = data.data;
     input_state = data.input_list;
     health_state = data.health_list;

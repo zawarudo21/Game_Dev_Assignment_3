@@ -112,7 +112,6 @@ function grievous(x, y, vx, vy)
 
     this.hp = 10;
     this.char_array = generateRandomCharArray(this.hp);
-    console.log(this.char_array);
     this.order_pressed = [];
     this.dpsable = false;
     this.time_started = false;
@@ -182,7 +181,6 @@ function grievous(x, y, vx, vy)
 
     this.hp = 10;
     this.char_array = generateRandomCharArray(this.hp);
-    console.log(this.char_array);
     this.order_pressed = [];
     this.dpsable = false;
     this.start_index = 0;
@@ -437,7 +435,6 @@ function grievous(x, y, vx, vy)
   
   grievous.prototype.update = function(timestep) {
 
-    // console.log(this.order_pressed);
     check_wounded = (this.forearm_hp.every(function (element){
       return element == 0;
     }))
@@ -488,20 +485,16 @@ function grievous(x, y, vx, vy)
       this.update_lower_right();
     }
     else
-    {
-      // if(this.hp == 0)
-        // console.log("you won");
-      
+    { 
       curr_timer = Date.now()
       elapsed_time = curr_timer - this.dps_timer_start
       // print("elapsed_time", elapsed_time)
-      console.log("elapsed_time: ", elapsed_time)
+      // console.log("elapsed_time: ", elapsed_time)
       if(elapsed_time > 2000){
         this.dpsable = false;
         this.time_started = false;
         this.load_state()
         forearm_hp = [3,3,3,3]
-        // console.log(this.hp)
       }
 
     }
